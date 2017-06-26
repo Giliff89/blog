@@ -3,7 +3,21 @@
     <title></title>
 </head>
 <body>
-    <h1> You're Home! </h1>
+    <h1>Welcome to Gina's blog homepage!</h1>
+
+    <h2>Latest post</h2>
+
+    {% for post in posts.all %}
+
+        <h3>{{ post.title }}</h3>
+        <br>
+        {{ post.pub_date }}
+        <br>
+        {{ post.summary }}
+        <br>
+        <br>
+
+    {% endfor %}
 
 </body>
 </html>
