@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +17,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
+<body>
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -33,43 +33,14 @@
             <div class="collapse navbar-collapse" id="mynav">
                 <ul class="nav navbar-nav">
                     <li><a>Instagram</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <h1> This is the contact page </h1>
 
-        <h1 class="text-center">Food, Travel, Life</h1>
-
-        {% load static %}
-
-        <img src="{% static 'posts/home.jpg' %}" class="img-responsive center-block" style="max-height:400px;"/>
-
-        <h2>Latest Posts</h2>
-        <hr />
-
-        {% for post in posts.all %}
-
-            <a href="{% url 'post_detail' post.id %}"><h3>{{ post.title }}</h3></a>
-            <h4><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ post.pub_date }}</h4>
-            <br>
-            <img src="{{ post.image.url }}" class="img-responsive center-block" style="max-height:200px;"/>
-            <br>
-            <p>{{ post.summary }}</p>
-            <br>
-            <br>
-
-        {% endfor %}
-
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
